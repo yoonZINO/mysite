@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def Home_view(requests):
     return render(requests, 'website\\home.html')
