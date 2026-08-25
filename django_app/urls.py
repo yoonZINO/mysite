@@ -1,8 +1,10 @@
 from django.urls import path
-from django_app.views import Home_view, About_view, Contact_view
+from . import views
 
+
+app_name = 'django_app' #assign app name to detemine for buttons in site when click them and move to baid page
 urlpatterns = [
-    path('',Home_view),
-    path('about/', About_view),
-    path('contact/', Contact_view)
+    path('',views.Home_view, name='index'),
+    path('about/', views.About_view, name='about'),
+    path('contact/', views.Contact_view, name='contact')
 ]
