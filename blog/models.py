@@ -13,3 +13,6 @@ class Post(models.Model):
     status = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return ('%i - %s') % (self.id, self.title)
+        
