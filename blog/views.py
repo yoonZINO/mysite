@@ -7,7 +7,7 @@ def blog_view(requests):
     return render(requests, 'blog\\blog-home.html', context)
 
 def blog_single(requests, pid):
-    post = get_object_or_404(Post, pk=pid)
+    post = get_object_or_404(Post, pk=pid, status=1)
     context = {'post':post}
     return render(requests, 'blog\\blog-single.html', context)
 
