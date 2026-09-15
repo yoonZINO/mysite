@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from blog.models import Post
+from blog.models import Post, Category
 
 def blog_view(requests):
     Posts = Post.objects.filter(status=1)
@@ -15,3 +15,4 @@ def testblog(requests, pid):
     post = get_object_or_404(Post, pk=pid)
     context = {'post':post}
     return render(requests, 'test.html', context)
+
