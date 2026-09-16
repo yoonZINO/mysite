@@ -6,5 +6,5 @@ app_name = 'blog' #assign app name to detemine for buttons in site when click th
 urlpatterns = [
     path('',views.blog_view, name='index'), #for blog/index
     path('blog/<int:pid>', views.blog_single, name='single'),
-    #path('post-<int:pid>', views.testblog, name='testblog')
+    path('test/', views.testblog, name='testblog')
 ]
