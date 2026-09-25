@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404
-from blog.models import Post, Category
+from blog.models import Post
 
-def blog_view(requests):
+def blog_view(requests, Author_username=None):
     Posts = Post.objects.filter(status=1)
+    if Author_username:
+        Posts = Posts.filter(author__username = Author_username)
     context = {'posts': Posts}
     return render(requests, 'blog\\blog-home.html', context)
 
