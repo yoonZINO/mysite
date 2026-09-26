@@ -7,5 +7,6 @@ urlpatterns = [
     path('',views.blog_view, name='index'), #for blog/index
     path('blog/<int:pid>', views.blog_single, name='single'),
     path('test/', views.testblog, name='testblog'),
-    path('Author/<str:Author_username>', views.blog_view, name='ListByAuthor')
-]
+    path('Author/<str:Author_username>', views.blog_view, name='ListByAuthor'),
+    path('Search/', views.blog_search, name='search')
+] 
