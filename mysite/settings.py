@@ -38,9 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_app.apps.DjangoAppConfig', #name of the django app
-    'blog.apps.BlogConfig' #name of the django app
+    'blog.apps.BlogConfig', #name of the django app
+    'django.contrib.sites', #for forms or to enable next one
+    'django.contrib.sitemaps', #all limks for search engine to tell hoe pages are changed
+    'robots',
 
 ]
+
+#sitemaps
+SITE_ID = 1
+
+#robots
+ROBOTS_USE_HOST = False
+ROBOTS_USE_SITEMAP = False
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

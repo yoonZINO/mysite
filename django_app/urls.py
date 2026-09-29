@@ -6,6 +6,7 @@ app_name = 'django_app' #assign app name to detemine for buttons in site when cl
 urlpatterns = [
     path('',views.Home_view, name='index'),
     path('about/', views.About_view, name='about'),
-    path('contact/', views.Contact_view, name='contact')
+    path('contact/', views.Contact_view, name='contact'),
+    path('test/', views.testblog, name='testblog')
     
 ]

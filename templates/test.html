@@ -1,4 +1,3 @@
-{% load blog_custom_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +6,13 @@
     <title>test</title>
 </head>
 <body>
-    <h>test page</h>
     
-    <p>this is test page</p>
-    <p>post count: {% post_counter %}</p>
-    <p>{% posts as totalpost %}</p>
-    <p>{% for post in totalpost %}</p>
-        <p>{{post}}</p>
-    <p>{% endfor %}</p>
+    <form action="{% url 'django_app:testblog' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">submit</button>
+    </form>
+
     
 </body>
 </html>
