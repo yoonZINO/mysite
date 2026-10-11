@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>contact</title>
 </head>
 <body>
     
-    <form action="{% url 'django_app:testblog' %}" method="post">
+    <form action="{% url 'django_app:contact' %}" method="post">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">submit</button>
