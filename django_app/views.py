@@ -12,17 +12,31 @@ def About_view(requests):
 def Contact_view(request):
     if request.method == 'POST':
         form = contactform(request.POST)
+        print (request.POST)
+
         if form.is_valid():
             form.save()
-    else:
-        form = contactform()
+            print("✅ Contact saved")
 
-    return render(request, 'django_app\\contact.html', {'form': form})
+        else:
+            print("❌ Form Errors:")
+            print(form.errors)
 
-def testblog(request):
-    if request.method == 'POST':
-        form = contactform(request.POST)
-        if form.is_valid():
-            form.save()
-    form = contactform()    
-    return render(request, 'test.html', {'form': form})
+    form = contactform()
+
+    return render(
+        request,
+        'django_app/contact.html',
+        {'form': form}
+    )
+
+
+
+
+#def testblog(request):
+ #   if request.method == 'POST':
+  #      form = contactform(request.POST)
+   #     if form.is_valid():
+    #        form.save()
+    #form = contactform()    
+    #return render(request, 'test.html', {'form': form})

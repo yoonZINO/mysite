@@ -58,6 +58,7 @@
 			<div class="col-lg-8">
 				<form class="form-area contact-form text-right" action="{% url 'django_app:contact' %}" method="post">
 					<div class="row">
+						{% csrf_token %}
 						<div class="col-lg-6 form-group">
 							<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
 								onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control"
@@ -83,7 +84,6 @@
 						<div class="alert-msg" style="text-align: left;"></div>
 						<button type="submit" class="genric-btn primary" style="float: right;">Send Message</button>
 					</div>
-					{% csrf_token %}
 
 				</form>
 			</div>
