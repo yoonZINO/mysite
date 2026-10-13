@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sites', #for forms or to enable next one
     'django.contrib.sitemaps', #all limks for search engine to tell hoe pages are changed
     'robots',
+    'django.contrib.humanize',
+    'debug_toolbar',
 
 ]
 
@@ -63,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -144,3 +147,8 @@ STATICFILES_DIRS = [ #other static directory that consider as valid static dir
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+INTERNAL_IPS = [
+ 
+    "127.0.0.1",
+ ]
