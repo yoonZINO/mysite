@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'robots',
     'django.contrib.humanize',
     'debug_toolbar',
+    "taggit",
 
 ]
 
@@ -152,3 +153,5 @@ INTERNAL_IPS = [
  
     "127.0.0.1",
  ]
+
+
