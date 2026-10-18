@@ -25,6 +25,7 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 
 
 
+
 sitemaps = {
 
     "static": StaticViewSitemap,
@@ -42,9 +43,13 @@ urlpatterns = [
         name="django.contrib.sitemaps.views.sitemap",
     ),
     path('robots.txt', include('robots.urls')),
+    path('summernote/', include('django_summernote.urls')),
     
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #static at setting value STATIC_URL and root douc at setting STATIC_ROOT
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) #for medias
 urlpatterns += debug_toolbar_urls() # for django debugger
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += path('captcha/', include('captcha.urls')),
