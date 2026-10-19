@@ -47,8 +47,9 @@ INSTALLED_APPS = [
     "taggit",
     'django_summernote',
     'captcha',
-    'multi_captcha_admin',
-    'django.contrib.admin',
+    #'multi_captcha_admin', need to install this package for admin captcha
+    #'django.contrib.admin',
+ 
 ]
 
 #sitemaps
@@ -58,7 +59,7 @@ SITE_ID = 1
 ROBOTS_USE_HOST = False
 ROBOTS_USE_SITEMAP = False
 
-
+'''
 SUMMERNOTE_THEME = 'bs4'
 SUMMERNOTE_CONFIG = {
     # Using SummernoteWidget - iframe mode, default
@@ -91,7 +92,7 @@ SUMMERNOTE_CONFIG = {
         ],
     }
 }
-
+'''
 
 
 
@@ -194,8 +195,8 @@ INTERNAL_IPS = [
 
 # SUmmernote config
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+"""
+capcha admin setting
+#MULTI_CAPTCHA_ADMIN = {
 
-#capcha admin setting
-MULTI_CAPTCHA_ADMIN = {
-    'engine': 'recaptcha2',
-}
+"""

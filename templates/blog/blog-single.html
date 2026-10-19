@@ -159,13 +159,31 @@
 								{{ post.content|safe }}
 							</p>
 						</div>
-					</div><!-- close single-post row -->
+					</div> <!--close single-post row -->
 
-					<!-- Comments area (optional, add if you have a comments app) -->
-					<div class="comments-area">
-						<h4>Comments</h4>
-						<!-- your comment loop here -->
-					</div>
+					<!--start custom comment system-->
+					<div id="disqus_thread"></div>
+					<script>
+						/**
+						*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+						/*
+						var disqus_config = function () {
+						this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						};
+						*/
+						(function () { // DON'T EDIT BELOW THIS LINE
+							var d = document, s = d.createElement('script');
+							s.src = 'https://127-0-0-1-8000-4sc0jbknqg.disqus.com/embed.js';
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+						})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+							powered by Disqus.</a></noscript>
+					<!--close custom comment system-->
+
 
 				</div><!-- close posts-list -->
 
@@ -188,7 +206,7 @@
 							<a href="#"><img class="img-fluid" src="{% static 'img/blog/ads-banner.jpg' %}" alt=""></a>
 						</div>
 
-						
+
 
 						<div class="single-sidebar-widget newsletter-widget">
 							<h4 class="newsletter-title">Newsletter</h4>
@@ -216,7 +234,7 @@
 							</p>
 						</div>
 
-						
+
 
 					</div><!-- close widget-wrap -->
 				</div><!-- close sidebar-widgets -->
