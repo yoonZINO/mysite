@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 from django.urls import reverse
+from django.contrib.contenttypes.fields import GenericRelation
+from comment.models import Comment
 
 # Create your models here.
 
@@ -16,6 +18,7 @@ class Post(models.Model):
     status = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
+    comments = GenericRelation(Comment)
     class Meta:
         ordering = ['created_date']
     def __str__(self):

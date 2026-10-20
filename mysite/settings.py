@@ -49,8 +49,11 @@ INSTALLED_APPS = [
     'captcha',
     #'multi_captcha_admin', need to install this package for admin captcha
     #'django.contrib.admin',
- 
+    'comment.apps.CommentConfig',
+    'user_account',
 ]
+ 
+
 
 #sitemaps
 SITE_ID = 1
@@ -200,3 +203,6 @@ capcha admin setting
 #MULTI_CAPTCHA_ADMIN = {
 
 """
+
+# account login url
+LOGIN_URL = 'admin:login' 

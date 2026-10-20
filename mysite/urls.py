@@ -26,6 +26,7 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 
 
 
+
 sitemaps = {
 
     "static": StaticViewSitemap,
@@ -36,6 +37,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django_app.urls')),
     path('blog/', include('blog.urls')),
+    path('user_accoutn/', include('user_account.urls')),
      path(
         "sitemap.xml",
         sitemap,
@@ -44,6 +46,8 @@ urlpatterns = [
     ),
     path('robots.txt', include('robots.urls')),
     path('summernote/', include('django_summernote.urls')),
+    path('comment/', include('comment.urls')),
+
     
 ]
 
