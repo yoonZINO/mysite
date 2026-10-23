@@ -1,0 +1,25 @@
+{
+  "name": "Relay Auth",
+  "slug": "relay-auth",
+  "author": "Colorlib",
+  "type": "Authentication UI starter",
+  "framework": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "pages": [
+    "index.html",
+    "register.html",
+    "forgot-password.html",
+    "check-email.html",
+    "reset-password.html",
+    "verify.html",
+    "expired-link.html",
+    "welcome.html",
+    "setup.html"
+  ],
+  "backendIncluded": false,
+  "externalDependencies": [],
+  "license": "CC BY 3.0"
+}
