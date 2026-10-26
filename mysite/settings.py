@@ -134,12 +134,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 
 
 # Password validation
@@ -179,12 +174,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
 
-STATICFILES_DIRS = [ #other static directory that consider as valid static dir 
-    BASE_DIR / "statics",
-]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -197,7 +187,6 @@ INTERNAL_IPS = [
  ]
 
 # SUmmernote config
-X_FRAME_OPTIONS = 'SAMEORIGIN'
 """
 capcha admin setting
 #MULTI_CAPTCHA_ADMIN = {
@@ -205,4 +194,4 @@ capcha admin setting
 """
 
 # account login url
-LOGIN_URL = 'admin:login' 
+#LOGIN_URL = 'admin:login' 
