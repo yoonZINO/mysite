@@ -45,17 +45,14 @@
                             <li><a>Logged in as {{request.user.username}}</a></li>
                             <li><a href="{% url 'user_account:logout' %}">Logout</a></li>
                             {% else %}
-                            <li><a href="{% url 'user_account:login' %}">Login</a></li>
-                            <li><a href="{% url 'user_account:signup' %}">Signup</a></li>
+                            <li><a href="{% url 'user_account:login' %}">ورود</a></li>
+                            <li><a href="{% url 'user_account:signup' %}">ثبت نام</a></li>
                             {% endif %}
                         </ul>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-6 header-top-right">
                         <div class="header-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
+                            <li><a href="https://rubika.ir/uni_teep">روبیکا</a></li>
                         </div>
                     </div>
                 </div>
@@ -68,13 +65,13 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li><a href="{% url 'django_app:index' %}">Home</a></li>
-                        <li><a href="{% url 'django_app:about' %}">About</a></li>
-                        <li><a href="{% url 'blog:index' %}">Blog</a></li>
+                        <li><a href="{% url 'django_app:index' %}">خانه</a></li>
+                        <li><a href="{% url 'django_app:about' %}">درباره ما</a></li>
+                        <li><a href="{% url 'blog:index' %}">محصولات</a></li>
 
                         </li>
 
-                        <li><a href="{%url 'django_app:contact' %}">Contact</a></li>
+                        <li><a href="{%url 'django_app:contact' %}">ارتباط</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
             </div>
@@ -93,57 +90,28 @@
             <div class="row">
                 <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget">
-                        <h6>About Agency</h6>
+                        <h6>درباره تولیدی</h6>
                         <p>
-                            The world has become so fast paced that people don’t want to stand by reading a page of
-                            information, they would much rather look at a presentation and understand the message. It
-                            has come to a point
+                            متن تعییر خوهد کرد
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
-                        <h6>Navigation Links</h6>
+                        <h6>لینک های مهم</h6>
                         <div class="row">
                             <div class="col">
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Feature</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Portfolio</a></li>
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <ul>
-                                    <li><a href="#">Team</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{% url 'django_app:index' %}">خانه</a></li>
+                                    <li><a href="{% url 'blog:index' %}">محصولات</a></li>
+                                    <li><a href="{% url 'django_app:contact' %}">درباره ما</a></li>
+                                    <li><a href="{% url 'django_app:about' %}">ارتباط با ما</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>
-                            For business professionals caught between high OEM price and mediocre print and graphic
-                            output.
-                        </p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank"
-                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="subscription relative">
-                                <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Email Address '" required="" type="email">
-                                    <button class="btn bb-btn"><span class="lnr lnr-location"></span></button>
-                                </div>
-                                <div class="mt-10 info"></div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget mail-chimp">
@@ -172,10 +140,7 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
                 <div class="col-lg-4 col-sm-12 footer-social">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                    <a href="#"><i class="fa fa-behance"></i></a>
+                    <li><a href="https://rubika.ir/uni_teep">روبیکا</a></li>
                 </div>
             </div>
         </div>
