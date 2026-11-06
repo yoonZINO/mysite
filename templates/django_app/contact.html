@@ -9,10 +9,10 @@
 		<div class="row d-flex align-items-center justify-content-center">
 			<div class="about-content col-lg-12">
 				<h1 class="text-white">
-					Contact Us
+					ارتباط با ما
 				</h1>
-				<p class="text-white link-nav"><a href="{% static 'index.html' %}">Home </a> <span
-						class="lnr lnr-arrow-right"></span> <a href="contact.html"> Contact Us</a></p>
+				<p class="text-white link-nav"><a href="{% static 'index.html' %}">خانه </a> <span
+						class="lnr lnr-arrow-right"></span> <a href="contact.html"> ارتباط با ما</a></p>
 			</div>
 		</div>
 	</div>
@@ -56,13 +56,13 @@
 				</div>
 			</div>
 			<div class="col-lg-8">
+				{% if request.user.is_authenticated %}
 				<form class="form-area contact-form text-right" action="{% url 'django_app:contact' %}" method="post">
 					<div class="row">
 						{% csrf_token %}
 						<div class="col-lg-6 form-group">
-							<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control"
-								required="" type="text">
+							<input name="username" placeholder="Enter your name" th:value="{{request.user.username}}"
+								class="common-input mb-20 form-control" required type="text">
 
 							<input name="email" placeholder="Enter email address"
 								pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
@@ -89,6 +89,15 @@
 					</div>
 
 				</form>
+				{% else %}
+				<ul>
+					<b>برای ارسال پیام وارد شوید یا ثبت نام کنید</b>
+					<li><a href="{% url 'user_account:login' %}">ورود</a></li>
+					<li><a href="{% url 'user_account:signup' %}">ثبت نام</a></li>
+				</ul>
+				{% endif %}
+
+
 				{% if messages %}
 				{% for message in messages %}
 				<div class="alert {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{ message|safe }}</div>

@@ -1,5 +1,0 @@
-Relay Auth — Copyright 2026 Colorlib
-Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0).
-License terms: https://creativecommons.org/licenses/by/3.0/legalcode
-Provide appropriate credit to Colorlib (https://colorlib.com/), a link to the
-license, and indicate changes. No third-party assets are included.

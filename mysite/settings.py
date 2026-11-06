@@ -195,3 +195,4 @@ capcha admin setting
 
 # account login url
 #LOGIN_URL = 'admin:login' 
+

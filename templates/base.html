@@ -42,8 +42,8 @@
                     <div class="col-lg-6 col-sm-6 col-6 header-top-left">
                         <ul>
                             {% if request.user.is_authenticated %}
-                            <li><a>Logged in as {{request.user.username}}</a></li>
-                            <li><a href="{% url 'user_account:logout' %}">Logout</a></li>
+                            <li><b>سلام {{request.user.username}}</b></li>
+                            <li><a href="{% url 'user_account:logout' %}">خروج</a></li>
                             {% else %}
                             <li><a href="{% url 'user_account:login' %}">ورود</a></li>
                             <li><a href="{% url 'user_account:signup' %}">ثبت نام</a></li>

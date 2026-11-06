@@ -4,17 +4,19 @@ from taggit.managers import TaggableManager
 from django.urls import reverse
 from django.contrib.contenttypes.fields import GenericRelation
 from comment.models import Comment
+from django_visit_count.mixins import VisitCountMixin
+
 
 # Create your models here.
 
 
-class Post(models.Model):
+class Post(VisitCountMixin, models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     image = models.ImageField(upload_to='blog/', default='blog/default.jpg')
     tags = TaggableManager()
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    counted_view = models.IntegerField(default=0) #deafult is 0
+    
     status = models.BooleanField(default=False)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
@@ -25,4 +27,4 @@ class Post(models.Model):
         return ('%i - %s') % (self.id, self.title)
     def get_absolute_url(self):
         return reverse('blog:single', kwargs={"pid": self.id})
-        
+

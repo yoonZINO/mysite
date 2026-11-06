@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.contrib import messages
 from django_app.forms import contactform
+from django.contrib.auth.decorators import login_required
 
 def Home_view(requests):
     return render(requests, 'django_app\\index.html')
 
 def About_view(requests):
     return render(requests, 'django_app\\about.html')
+
 
 def Contact_view(request):
     if request.method == 'POST':
