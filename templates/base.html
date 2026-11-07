@@ -67,10 +67,12 @@
                     <ul class="nav-menu">
                         <li><a href="{% url 'django_app:index' %}">خانه</a></li>
                         <li><a href="{% url 'django_app:about' %}">درباره ما</a></li>
-                        <li><a href="{% url 'blog:index' %}">محصولات</a></li>
-
+                        <li class="menu-has-children"><a href="">محصولات</a>
+                            <ul>
+                                <li><a href="{% url 'blog:index' %}">فرم مدارس</a></li>
+                                <li><a href="#">فرم رستوان</a></li>
+                            </ul>
                         </li>
-
                         <li><a href="{%url 'django_app:contact' %}">ارتباط</a></li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
