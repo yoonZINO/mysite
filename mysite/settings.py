@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_app.apps.DjangoAppConfig', #name of the django app
-    'blog.apps.BlogConfig', #name of the django app
+    'django_app.apps.DjangoAppConfig', #name of the django app / home, cintact, about
+    'blog.apps.BlogConfig', #name of the django app / shcools uniform
     'django.contrib.sites', #for forms or to enable next one
     'django.contrib.sitemaps', #all limks for search engine to tell hoe pages are changed
     'robots',
